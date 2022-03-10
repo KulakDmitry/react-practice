@@ -3,7 +3,7 @@ import withName from "../HOC/withName";
 
 const Hello = ({ name, age }) => (
   <h1>
-    Hello {name}! yours age is {age}
+    Hello {name}! your age is {age}
   </h1>
 );
 

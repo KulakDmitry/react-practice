@@ -6,6 +6,7 @@ import LazyLoadingPage from "./pages/LazyLoading/LazyLoadingPage";
 import ControllComponent from "./pages/LoginForms/ControllComponent";
 import UncontrollComponent from "./pages/LoginForms/UncontrollComponent";
 import Buttons from "./pages/ReactChildren/Buttons";
+import Timer from "./pages/Timer/Timer";
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
       <HomePage />
 
       <Routes>
-        <Route path="LazyLoadingPage" element={<LazyLoadingPage />} />
-        <Route path="HocPage" element={<HocPage />} />
-        <Route path="Buttons" element={<Buttons />} />
-        <Route path="ControllComponent" element={<ControllComponent />} />
-        <Route path="UncontrollComponent" element={<UncontrollComponent />} />
+        <Route path="lazyLoadingPage" element={<LazyLoadingPage />} />
+        <Route path="hocPage" element={<HocPage />} />
+        <Route path="buttons" element={<Buttons />} />
+        <Route path="controllComponent" element={<ControllComponent />} />
+        <Route path="uncontrollComponent" element={<UncontrollComponent />} />
+        <Route path="timer" element={<Timer />} />
       </Routes>
     </>
   );
