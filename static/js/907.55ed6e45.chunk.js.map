@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/907.55ed6e45.chunk.js","mappings":"qLAEe,SAASA,IACtB,OAAO","sources":["pages/LazyLoading/LoadingComponent.jsx"],"sourcesContent":["import React from \"react\";\n\nexport default function LoadingComponent() {\n  return <div>hello</div>;\n}\n"],"names":["LoadingComponent"],"sourceRoot":""}
