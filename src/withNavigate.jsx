@@ -1,5 +1,5 @@
 import React from "react";
-import NavigateMenu from "./pages/NavigateMenu ";
+import NavigateMenu from "./pages/NavigateMenu";
 
 function withNavigate(WrappedComponent) {
   return class extends React.Component {
@@ -7,7 +7,7 @@ function withNavigate(WrappedComponent) {
       return (
         <>
           <NavigateMenu />
-          <WrappedComponent {...this.props} />;
+          <WrappedComponent {...this.props} />
         </>
       );
     }

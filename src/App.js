@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import HocPage from "./pages/HOC/HocPage";
-import NavigateMenu from "./pages/NavigateMenu ";
 import LazyLoadingPage from "./pages/LazyLoading/LazyLoadingPage";
 import ControlledComponent from "./pages/LoginForms/ControlledComponent";
 import UncontrolledComponent from "./pages/LoginForms/UncontrolledComponent";
+import NavigateMenu from "./pages/NavigateMenu";
 import Buttons from "./pages/ReactChildren/Buttons";
 import Timer from "./pages/Timer/Timer";
 import withNavigate from "./withNavigate";
