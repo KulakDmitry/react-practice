@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-const prettyMilliseconds = require("pretty-ms");
+import prettyMilliseconds from "pretty-ms";
 
 export default function Timer() {
   const [time, setTime] = useState(0);
