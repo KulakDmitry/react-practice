@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/907.25a73a4f.chunk.js","mappings":"qLAEe,SAASA,IACtB,OAAO,gBAAKC,UAAU,cAAf","sources":["pages/LazyLoading/LoadingComponent.jsx"],"sourcesContent":["import React from \"react\";\n\nexport default function LoadingComponent() {\n  return <div className=\"text-center\">hello</div>;\n}\n"],"names":["LoadingComponent","className"],"sourceRoot":""}

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_practice=self.webpackChunkreact_practice||[]).push([[907],{907:function(e,c,t){t.r(c),t.d(c,{default:function(){return n}});t(791);var r=t(184);function n(){return(0,r.jsx)("div",{className:"text-center",children:"hello"})}}}]);
+//# sourceMappingURL=907.25a73a4f.chunk.js.map
