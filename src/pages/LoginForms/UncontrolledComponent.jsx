@@ -12,7 +12,6 @@ export default function UncontrolledComponent() {
     setIsValidLogin(true);
     if (!login.length || login.length > 15) {
       setIsValidLogin(false);
-      return;
     }
   };
 
@@ -21,7 +20,6 @@ export default function UncontrolledComponent() {
     setIsValidPassword(true);
     if (!password.length || password.length > 15) {
       setIsValidPassword(false);
-      return;
     }
   };
 
