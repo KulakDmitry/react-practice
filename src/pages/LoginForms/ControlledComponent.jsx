@@ -1,5 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { useReducer } from "react";
+
+const loginFormActionTypes = {
+  SET_LOGIN: "SET_LOGIN",
+  SET_PASSWORD: "SET_PASSWORD",
+  SET_IS_VALID_LOGIN: "SET_IS_VALID_LOGIN",
+  SET_IS_VALID_PASSWORD: "SET_IS_VALID_PASSWORD",
+};
 
 export default function ControlledComponent() {
   const [state, dispatch] = useReducer(reducer, {
@@ -11,24 +18,24 @@ export default function ControlledComponent() {
 
   function reducer(state, action) {
     switch (action.type) {
-      case "setLogin":
+      case loginFormActionTypes.SET_LOGIN:
         return {
           ...state,
           login: action.payload.login,
         };
-      case "setPassword": {
+      case loginFormActionTypes.SET_PASSWORD: {
         return {
           ...state,
           password: action.payload.password,
         };
       }
-      case "setIsValidLogin": {
+      case loginFormActionTypes.SET_IS_VALID_LOGIN: {
         return {
           ...state,
           validLogin: action.payload.validLogin,
         };
       }
-      case "setIsValidPassword": {
+      case loginFormActionTypes.SET_IS_VALID_PASSWORD: {
         return {
           ...state,
           validPassword: action.payload.validPassword,
@@ -42,30 +49,39 @@ export default function ControlledComponent() {
 
   const handleChangeLogin = (event) => {
     const login = event.target.value;
-    dispatch({ type: "setLogin", payload: { login: login } });
-    dispatch({ type: "setIsValidLogin", payload: { validLogin: true } });
+    dispatch({
+      type: loginFormActionTypes.SET_LOGIN,
+      payload: { login: login },
+    });
+    dispatch({
+      type: loginFormActionTypes.SET_IS_VALID_LOGIN,
+      payload: { validLogin: true },
+    });
 
     if (!login.length || login.length > 15) {
-      dispatch({ type: "setIsValidLogin", payload: { validLogin: false } });
-      return;
+      dispatch({
+        type: loginFormActionTypes.SET_IS_VALID_LOGIN,
+        payload: { validLogin: false },
+      });
     }
   };
 
-  const handleChangePassrord = (event) => {
+  const handleChangePassword = (event) => {
     const password = event.target.value;
-    dispatch({ type: "setPassword", payload: { password: password } });
     dispatch({
-      type: "setIsValidPassword",
+      type: loginFormActionTypes.SET_PASSWORD,
+      payload: { password: password },
+    });
+    dispatch({
+      type: loginFormActionTypes.SET_IS_VALID_PASSWORD,
       payload: { validPassword: true },
     });
 
     if (!password.length || password.length > 15) {
       dispatch({
-        type: "setIsValidPassword",
+        type: loginFormActionTypes.SET_IS_VALID_PASSWORD,
         payload: { validPassword: false },
       });
-
-      return;
     }
   };
   const { login, password, validLogin, validPassword } = state;
@@ -93,7 +109,7 @@ export default function ControlledComponent() {
               type="password"
               placeholder="password"
               value={password}
-              onChange={handleChangePassrord}
+              onChange={handleChangePassword}
             />
             {validPassword ? null : (
               <span className="block text-red-600">
