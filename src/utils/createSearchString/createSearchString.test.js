@@ -1,11 +1,11 @@
 import createSearchString from "./createSearchString";
 
 describe("createSearchString", () => {
-  it("should match with one parameter", () => {
+  it("should return a correct search string when one parameters provided", () => {
     expect(createSearchString({ page: "1" })).toMatch("?page=1");
   });
 
-  it("should match with some parameters", () => {
+  it("should return a correct search string when multiple parameters provided", () => {
     expect(
       createSearchString({ page: "1", user: "name", count: "number" })
     ).toMatch("?page=1&user=name&count=number");
