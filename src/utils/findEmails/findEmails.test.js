@@ -1,13 +1,19 @@
 import { removeEmails, findEmails } from "./findEmails";
 
-const string = "Sincere@april.biz hello world !! Nathan@yesenia.net";
-describe("Emails check", () => {
-  it("should removeEmails", () => {
-    expect(removeEmails(string)).toMatch("hello world !!");
+describe("Check emails", () => {
+  const mockStringWithEmails =
+    "Sincere@april.biz hello world !! Nathan@yesenia.net";
+
+  describe("Remove email", () => {
+    it("should return the string without emails when provided a string with multiple emails.", () => {
+      expect(removeEmails(mockStringWithEmails)).toMatch("hello world !!");
+    });
   });
 
-  it("should findEmails", () => {
-    expect(findEmails(string)).toContain("Sincere@april.biz");
-    expect(findEmails(string)).toContain("Nathan@yesenia.net");
+  describe("Find email", () => {
+    it("should return the first found email when provided a string with multiple emails.", () => {
+      expect(findEmails(mockStringWithEmails)).toContain("Sincere@april.biz");
+      expect(findEmails(mockStringWithEmails)).toContain("Nathan@yesenia.net");
+    });
   });
 });
