@@ -7,5 +7,3 @@ function removeEmails(string) {
 }
 
 export { findEmails, removeEmails };
-
-module.exports = { findEmails, removeEmails };

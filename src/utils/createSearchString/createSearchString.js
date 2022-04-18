@@ -9,5 +9,3 @@ export default function createSearchString(queryParams) {
 
   return searchString;
 }
-
-module.exports = createSearchString;

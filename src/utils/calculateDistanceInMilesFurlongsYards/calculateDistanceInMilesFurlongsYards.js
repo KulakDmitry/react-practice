@@ -1,4 +1,6 @@
-export function calculateDistanceInMilesFurlongsYards(fullDistanceInYards = 0) {
+export default function calculateDistanceInMilesFurlongsYards(
+  fullDistanceInYards = 0
+) {
   let remainder = fullDistanceInYards;
   const ONE_MILE = 1760; // one mile is equal to 1760 yards
   const ONE_FURLONG = 220; // one furlong is equal to 220 yards
@@ -11,5 +13,3 @@ export function calculateDistanceInMilesFurlongsYards(fullDistanceInYards = 0) {
     yards ? ` ${yards}y` : ""
   }`.trim(); // trim() method removes whitespace from the beginning and end
 }
-
-module.exports = calculateDistanceInMilesFurlongsYards;
